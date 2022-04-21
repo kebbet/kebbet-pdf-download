@@ -14,7 +14,7 @@
  * From https://wordpress.org/support/topic/add-code-before-each-image/
  */
 
-namespace kebbet\muplugin\pdfdownload;
+namespace kebbet\mu\pdf_download;
 
 /**
  * Find all links to pdf-files and insert a `download` attribute.
@@ -23,7 +23,6 @@ namespace kebbet\muplugin\pdfdownload;
  * @return string The modified content.
  */
 function insert_download_attribute( $content ) {
-
 	// Check if we're inside the main loop in a single Post.
 	if ( is_singular() && in_the_loop() && is_main_query() ) {
 
